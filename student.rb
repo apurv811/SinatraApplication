@@ -68,7 +68,7 @@ end
 
 #Route for the new student form
 get '/students/new' do
-  halt(401, 'Not Authorized, Please go back and login') unless session[:admin]
+  redirect to('/login') unless session[:admin]
   @student = Student.new
   erb :new_student
 end

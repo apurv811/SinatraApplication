@@ -1,10 +1,7 @@
 Name : Apurva Patel
-ID : 1353006.
+ID : 00001419652.
 
-Website developed using sinatra framework.
-It has some functionalties for students and comments where students can be added, or student information can be updated or deleted.
-Comments can be added and validation is also given.
-
+Website developed using sinatra framework where we can add, delete and edit student information
 
 Deployed at: https://apurvasinatra.herokuapp.com/
 

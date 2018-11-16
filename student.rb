@@ -68,7 +68,7 @@ end
 
 #Route for the new student form
 get '/students/new' do
-  erb :login unless session[:admin]
+  redirect to('/logout') unless session[:admin]
   @student = Student.new
   erb :new_student
 end
@@ -88,7 +88,7 @@ end
 
 #Creates new student
 post '/students' do
-  halt(401, 'Not Authorized, Please go back and login') unless session[:admin]
+  redirect to('/logout') unless session[:admin]
   @student = Student.create(params[:student])
   redirect to('/students')
 end

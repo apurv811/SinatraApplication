@@ -1,4 +1,4 @@
-Name : Umang Shah
+Name : Apurva Patel
 ID : 1353006.
 
 Website developed using sinatra framework.
@@ -6,8 +6,8 @@ It has some functionalties for students and comments where students can be added
 Comments can be added and validation is also given.
 
 
-Deployed at: https://umangfinaltest.herokuapp.com/
+Deployed at: https://apurvasinatra.herokuapp.com/
 
 credentials to login to website:
-username: umang
-password: password
+username: apurva
+password: login123

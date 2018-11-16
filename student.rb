@@ -68,7 +68,7 @@ end
 
 #Route for the new student form
 get '/students/new' do
-  redirect to('/login') unless session[:admin]
+  erb :login unless session[:admin]
   @student = Student.new
   erb :new_student
 end

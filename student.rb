@@ -81,7 +81,7 @@ end
 
 #Route for the form to edit a single student
 get '/students/:id/edit' do
-  halt(401, 'Not Authorized, Please go back and login') unless session[:admin]
+  redirect to('/logout') unless session[:admin]
   @student = Student.get(params[:id])
   erb :edit_student
 end
@@ -95,7 +95,7 @@ end
 
 #Edits a single student
 put '/students/:id' do
-  halt(401, 'Not Authorized, Please go back and login') unless session[:admin]
+  redirect to('/logout') unless session[:admin]
   @student = Student.get(params[:id])
   @student.update(params[:student])
   redirect to("/students/#{@student.id}")
@@ -103,7 +103,7 @@ end
 
 #Deletes a single student
 delete '/students/:id' do
-  halt(401, 'Not Authorized, Please go back and login') unless session[:admin]
+  redirect to('/logout') unless session[:admin]
   Student.get(params[:id]).destroy
   redirect to('/students')
 end

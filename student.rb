@@ -41,7 +41,7 @@ get '/students' do
 end
 
 get '/students/new' do
-  halt(401, 'Not Authorized, Please go back login') unless session[:admin]
+  redirect to('/logout') unless session[:admin]
   student = Student.new
   erb :new_student
 end
